@@ -5,12 +5,19 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys')
 const passport = require('passport');
-// @route   GET api/user/test
-// @desc    Tests user route
-//@access   Public
+
+//Load input validation
+const validateRegisterInput = require('../../validation/register')
+const validateLoginInput = require('../../validation/login');
+
 
 //load user model
 const User = require('../../Models/User');
+
+
+// @route   GET api/user/test
+// @desc    Tests user route
+//@access   Public
 
 router.get('/test', (req,res) => res.json({"msg":"user works"}));
 
@@ -19,10 +26,19 @@ router.get('/test', (req,res) => res.json({"msg":"user works"}));
 //@access   Public
 
 router.post ('/register', (req,res)=>{
+
+  const { errors, isValid} = validateRegisterInput(req.body);
+
+  //Check Validation
+  if(!isValid){
+    return res.status(400).json(errors);
+  }
+
   User.findOne({ email:req.body.email})
     .then(user=>{
       if(user) {
-        return res.status(400).json({email:'Email Already Exists'});
+        errors.email = 'Email Already Exists';
+       return res.status(400).json(errors);
       } else{
         const avatar = gravatar.url(req.body.email,{
           s:'200', //size
@@ -49,11 +65,20 @@ router.post ('/register', (req,res)=>{
 });
 
 
-// @route   GET api/user/register
+// @route   GET api/user/login
 // @desc    Login User/ Returning JWT Token
 //@access   Public
 
 router.post('/login', (req,res)=>{
+ 
+  const { errors, isValid} = validateLoginInput(req.body);
+  
+    //Check Validation
+    if(!isValid){
+      return res.status(400).json(errors);
+    }
+  
+  
   const email = req.body.email;
   const password = req.body.password;
   
@@ -63,7 +88,8 @@ router.post('/login', (req,res)=>{
     .then(user=>{
       //check for user
       if(!user){
-        return res.status(404).json({email:'Email not found'});
+        errors.email = 'User not found'
+        return res.status(404).json(errors);
       }
 
       //check password
@@ -86,8 +112,8 @@ router.post('/login', (req,res)=>{
             });   
           }       
           else{
-            
-            return res.status(400).json({password:'Password Incorrect'});
+            errors.password= 'Passoword Incorrect'
+            return res.status(400).json(errors);
           }
         });
     });
