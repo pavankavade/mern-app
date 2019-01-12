@@ -30,8 +30,9 @@ app.use(passport.initialize());
 //Passport Config
 require('./config/passport')(passport);
 
-
+//test
 //Use Routes
+
 app.use('/api/users',users);
 app.use('/api/posts',posts);
 app.use('/api/profile',profile);
