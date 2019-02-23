@@ -60,7 +60,8 @@ class Register extends Component {
                   value={this.state.name}
                   onChange={this.onChange}
                   error={errors.name}
-                />
+                /><small>This site uses Gravatar so if you want a profile image, use
+                a Gravatar email, you can sign up for Gravatar <a href="https://wordpress.com/start/wpcc/oauth2-user?ref=oauth2&oauth2_redirect=https%3A%2F%2Fpublic-api.wordpress.com%2Foauth2%2Fauthorize%2F%3Fclient_id%3D1854%26response_type%3Dcode%26blog_id%3D0%26state%3Db8c0833b63a9c1e503f52546107d7d2158efe4b8ee1e2f59dfb4475be7d8b2d8%26redirect_uri%3Dhttps%253A%252F%252Fen.gravatar.com%252Fconnect%252F%253Faction%253Drequest_access_token%26jetpack-code%26jetpack-user-id%3D0%26action%3Doauth2-login&oauth2_client_id=1854">here</a></small>
                 <TextFieldGroup
                   placeholder="Email Address"
                   name="email"
@@ -68,9 +69,9 @@ class Register extends Component {
                   value={this.state.email}
                   onChange={this.onChange}
                   error={errors.email}
-                  info="This site uses Gravatar so if you want a profile image, use
-                  a Gravatar email"
+
                 />
+
                 <TextFieldGroup
                   placeholder="Password"
                   name="password"

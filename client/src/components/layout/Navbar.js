@@ -18,7 +18,7 @@ class Navbar extends Component {
 
     const authLinks = (
 
-      <ul className="navbar-nav ml-auto">
+      <ul className="navbar-nav ml-auto mr-sm-2">
         <li className="nav-item">
           <Link className="nav-link" to="/feed">
             Job Postings
@@ -78,19 +78,24 @@ class Navbar extends Component {
             <span className="navbar-toggler-icon" />
           </button>
 
-          <div className="collapse navbar-collapse" id="mobile-nav">
+          <div className="collapse navbar-collapse mr-auto" id="mobile-nav">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
                 <Link className="nav-link" to="/profiles">
-                  {" "}
+                  {' '}
                   Workers
                 </Link>
               </li>
+
             </ul>
+
           </div>
+
+        </div>
+        <div >
           {isAuthenticated ? authLinks : guestLinks}
         </div>
-      </nav>
+      </nav >
     );
   }
 }
