@@ -14,18 +14,18 @@ const ProfileSchema = new Schema({
     required: true,
     max: 20
   },
-  company:{
-    type:String,
+  company: {
+    type: String,
   },
-  website:{
-    type:String,
+  website: {
+    type: String,
 
   },
   location: {
     type: String,
   },
   status: {
-    type:String,
+    type: String,
     required: true
   },
   skills: {
@@ -33,97 +33,100 @@ const ProfileSchema = new Schema({
     required: true
   },
   bio: {
-    type:String
+    type: String
   },
-  github:{
-    type:String,
+  contact: {
+    type: String
+  },
+  github: {
+    type: String,
 
   },
-  experience:[
+  experience: [
     {
       title: {
         type: String,
-        required:true
+        required: true
       },
-      company: 
+      company:
       {
-       type: String,
-       required:true
+        type: String,
+        required: true
       },
       location: {
-        type:String,
+        type: String,
 
       },
-      from:{
-        type:Date,
-        required:true
+      from: {
+        type: Date,
+        required: true
       },
-      to:{
-        type:Date
+      to: {
+        type: Date
       },
-      Current:{
+      Current: {
         type: Boolean,
         default: false
       },
-      description:{
-        type:String
+      description: {
+        type: String
       }
     }
   ],
-  education:[
+  education: [
     {
       school: {
         type: String,
-        required:true
+        required: true
       },
-      degree: 
+      degree:
       {
-       type: String,
-       required:true
+        type: String,
+        required: true
       },
       fieldofstudy: {
-        type:String,
+        type: String,
         required: true
 
       },
-      from:{
-        type:Date,
-        required:true
+      from: {
+        type: Date,
+        required: true
       },
-      to:{
-        type:Date
+      to: {
+        type: Date
       },
-      Current:{
+      Current: {
         type: Boolean,
         default: false
       },
-      description:{
-        type:String
+      description: {
+        type: String
       }
     }
   ],
-  social:{
-    youtube:{
-      type:String, 
+  social: {
+    youtube: {
+      type: String,
     },
-    twitter:{
-      type:String, 
+    twitter: {
+      type: String,
     },
-    facebook:{
-      type:String, 
+    facebook: {
+      type: String,
     },
-    linkedin:{
-      type:String, 
+    linkedin: {
+      type: String,
     },
-    instagram:{
-      type:String, 
+    instagram: {
+      type: String,
     },
   },
-  date:{
-    type:Date,
-    default:Date.now
+  date: {
+    type: Date,
+    default: Date.now
   }
 });
 
 
-module.exports= Profile = mongoose.model('profile', ProfileSchema);
+module.exports = Profile = mongoose.model('profile', ProfileSchema);

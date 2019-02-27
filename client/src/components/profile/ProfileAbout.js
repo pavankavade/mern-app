@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import isEmpty from '../../validation/is-empty';
+import { connect } from "react-redux";
 
 class ProfileAbout extends Component {
   render() {
@@ -15,8 +16,9 @@ class ProfileAbout extends Component {
         <i className="fa fa-check" /> {skill}
       </div>
     ));
-
+    const { isAuthenticated } = this.props.auth;
     return (
+
       <div className="row">
         <div className="col-md-12">
           <div className="card card-body bg-light mb-3">
@@ -34,6 +36,19 @@ class ProfileAbout extends Component {
               <div className="d-flex flex-wrap justify-content-center align-items-center">
                 {skills}
               </div>
+
+            </div>
+            <hr />
+            <h3 className="text-center text-info">Contact</h3>
+            <div className="row">
+              <div className="d-flex flex-wrap justify-content-center align-items-center">
+                {isAuthenticated ? (
+                  <h4>  &nbsp;&nbsp;{profile.contact}</h4>
+                ) : (
+                    <span>&nbsp;&nbsp;<a href="/register">Create Account</a> to view contact</span>
+                  )}
+              </div>
+
             </div>
           </div>
         </div>
@@ -43,7 +58,11 @@ class ProfileAbout extends Component {
 }
 
 ProfileAbout.propTypes = {
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
 };
+const mapStateToProps = state => ({
+  auth: state.auth
+});
 
-export default ProfileAbout;
+export default connect(mapStateToProps)(ProfileAbout);

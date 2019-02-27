@@ -20,6 +20,7 @@ class EditProfile extends Component {
       skills: "",
       githubusername: "",
       bio: "",
+      contact: "",
       twiiter: "",
       facebook: "",
       linkedin: "",
@@ -54,6 +55,8 @@ class EditProfile extends Component {
         ? profile.githubusername
         : "";
       profile.bio = !isEmpty(profile.bio) ? profile.bio : "";
+      profile.contact = !isEmpty(profile.contact) ? profile.contact : "";
+      
       profile.social = !isEmpty(profile.social) ? profile.social : {};
       profile.social.facebook = !isEmpty(profile.social.facebook)
         ? profile.social.facebook
@@ -81,6 +84,7 @@ class EditProfile extends Component {
         skills: skillsCSV,
         githubusername: profile.githubusername,
         bio: profile.bio,
+        contact: profile.contact,
         twitter: profile.twitter,
         facebook: profile.facebook,
         linkedin: profile.linkedin,
@@ -100,6 +104,7 @@ class EditProfile extends Component {
       skills: this.state.skills,
       githubusername: this.state.githubusername,
       bio: this.state.bio,
+      contact: this.state.contact,
       twitter: this.state.twitter,
       facebook: this.state.facebook,
       linkedin: this.state.linkedin,
@@ -257,6 +262,15 @@ class EditProfile extends Component {
                   error={errors.bio}
                   info="Tell us a little about yourself"
                 />
+                <TextAreaFieldGroup
+                  placeholder="Contact information"
+                  name="contact"
+                  value={this.state.contact}
+                  onChange={this.onChange}
+                  error={errors.contact}
+                  info="Tell us a little about yourself"
+                />
+
 
                 <div className="mb-3">
                   <button

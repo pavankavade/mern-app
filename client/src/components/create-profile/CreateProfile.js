@@ -20,6 +20,7 @@ class CreateProfile extends Component {
       skills: "",
       githubusername: "",
       bio: "",
+      contact: "",
       twiiter: "",
       facebook: "",
       linkedin: "",
@@ -49,6 +50,7 @@ class CreateProfile extends Component {
       skills: this.state.skills,
       githubusername: this.state.githubusername,
       bio: this.state.bio,
+      contact: this.state.contact,
       twitter: this.state.twitter,
       facebook: this.state.facebook,
       linkedin: this.state.linkedin,
@@ -204,6 +206,14 @@ class CreateProfile extends Component {
                   value={this.state.bio}
                   onChange={this.onChange}
                   error={errors.bio}
+                  info="Tell us a little about yourself"
+                />
+                <TextAreaFieldGroup
+                  placeholder="Contact information"
+                  name="contact"
+                  value={this.state.contact}
+                  onChange={this.onChange}
+                  error={errors.contact}
                   info="Tell us a little about yourself"
                 />
 

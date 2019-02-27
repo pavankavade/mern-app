@@ -29,18 +29,18 @@ class PostItem extends Component {
 
   render() {
     const { post, auth, showActions } = this.props;
-
+    const { profile } = this.props;
     return (
       <div className="card card-body mb-3">
         <div className="row">
           <div className="col-md-2">
-            <a href="profile.html">
+            <Link to={`/profile/`} className="btn btn-info">
               <img
                 className="rounded-circle d-none d-md-block"
                 src={post.avatar}
                 alt=""
               />
-            </a>
+            </Link>
             <br />
             <p className="text-center">{post.name}</p>
           </div>
@@ -93,11 +93,13 @@ PostItem.defaultProps = {
 };
 
 PostItem.propTypes = {
+
   deletePost: PropTypes.func.isRequired,
   addLike: PropTypes.func.isRequired,
   removeLike: PropTypes.func.isRequired,
   post: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({

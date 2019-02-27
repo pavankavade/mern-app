@@ -29,6 +29,11 @@ class ProfileItem extends Component {
             <Link to={`/profile/${profile.handle}`} className="btn btn-info">
               View Profile
             </Link>
+
+            <Link to={`/profile/${profile.handle}`} className="ml-3 btn btn-info">
+              Contact
+            </Link>
+
           </div>
           <div className="col-md-4 d-none d-md-block">
             <h4>Skill Set</h4>
