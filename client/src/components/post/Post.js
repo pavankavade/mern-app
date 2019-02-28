@@ -22,10 +22,12 @@ class Post extends Component {
     } else {
       postContent = (
         <div>
+
           <PostItem post={post} showActions={false} />
+
           <CommentForm postId={post._id} />
           <CommentFeed postId={post._id} comments={post.comments} />
-        </div>
+        </div >
       );
     }
 
@@ -37,7 +39,9 @@ class Post extends Component {
               <Link to="/feed" className="btn btn-light mb-3">
                 Back To Feed
               </Link>
+
               {postContent}
+
             </div>
           </div>
         </div>
