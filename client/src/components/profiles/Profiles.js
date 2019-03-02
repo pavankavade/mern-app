@@ -14,6 +14,7 @@ class Profiles extends Component {
     const { profiles, loading } = this.props.profile;
     let profileItems;
 
+
     if (profiles === null || loading) {
       profileItems = <Spinner />;
     } else {
@@ -35,11 +36,30 @@ class Profiles extends Component {
               <p className="lead text-center">
                 Browse and connect with Workers
               </p>
+              <div className="card card-body mb-4 p-4">
+                <h2 className="display-4 text-center">
+                  Search for a Worker
+                    </h2>
+
+                <form >
+                  <div className="form-group">
+                    <input
+                      type="text"
+                      className="form-control form-control-lg"
+                      placeholder="Search.."
+                      name="trackTitle"
+
+                    />
+                  </div>
+                  <button className="btn btn-primary btn-lg btn-block mb-5"
+                    type="submit">Get Worker Profiles</button>
+                </form>
+              </div>
               {profileItems}
             </div>
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 }
