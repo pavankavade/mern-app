@@ -24,10 +24,6 @@ const ProfileSchema = new Schema({
   location: {
     type: String,
   },
-  status: {
-    type: String,
-    required: true
-  },
   skills: {
     type: [String],
     required: true
@@ -37,6 +33,9 @@ const ProfileSchema = new Schema({
   },
   contact: {
     type: String
+  },
+  isWorker: {
+    type: Boolean
   },
   github: {
     type: String,

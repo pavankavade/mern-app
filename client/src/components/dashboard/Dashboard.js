@@ -10,6 +10,7 @@ import { deleteAccount } from "../../actions/profileActions";
 import Experience from "./Experience";
 import Education from "./Education";
 class Dashboard extends Component {
+
   componentDidMount() {
     this.props.getCurrentProfile();
   }
@@ -22,6 +23,28 @@ class Dashboard extends Component {
     const { profile, loading } = this.props.profile;
 
     let dashboardContent;
+    let edit;
+    let exp, edu;
+    if (profile !== null) {
+      exp = (
+        (!profile.isWorker ? null :
+          <Experience experience={profile.experience} />
+        )
+      );
+    }
+
+
+
+    if (profile !== null) {
+      edit = (
+        (!profile.isWorker ? <Link to="/edit-company-profile" className="btn btn-light">
+          <i className="fas fa-user-circle text-info mr-1" /> Edit Company Profile
+        </Link> : <ProfileActions />
+
+        )
+      )
+    }
+
     if (profile === null || loading) {
       dashboardContent = (
         <h4>
@@ -32,17 +55,18 @@ class Dashboard extends Component {
       //Check if logged in user has profile data
       if (Object.keys(profile).length > 0) {
         dashboardContent = (
+
           <div>
             <p className="lead text-muted">
               Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
               {user.hello}
             </p>
-            <ProfileActions />
+            <div className="btn-group mb-4" role="group">
 
-            <Experience experience={profile.experience} />
-            <Education education={profile.education} />
-
-            {/* Todo: exp and edu */}
+              {edit}
+            </div>
+            {exp}
+            {edu}
             <div style={{ marginBottom: "60px" }} />
             <button
               onClick={this.onDeleteClick.bind(this)}
@@ -63,17 +87,24 @@ class Dashboard extends Component {
             <p>You have not yet setup a profile, please add some info</p>
             <Link to="/create-profile" className="btn btn-lg btn-info">
               Create Profile
+            </Link><Link to="/create-company-profile" className="btn btn-lg btn-info">
+              Create Company Profile
             </Link>
           </div>
         );
       }
     }
+
+
+
+
     return (
-      <div className="dashboard">
+      <div className="dashboard" >
         <div className="container">
           <div className="row">
             <div className="col-md-12">
               <h1 className="display-4">Dashboard</h1>
+
               {dashboardContent}
             </div>
           </div>

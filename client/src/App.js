@@ -24,6 +24,9 @@ import Profile from "./components/profile/Profile";
 import NotFound from "./components/not-found/NotFound";
 import Posts from './components/posts/Posts';
 import Post from './components/post/Post';
+
+import CreateCProfile from "./components/create-profile/CreateCProfile";
+import EditCProfile from "./components/edit-profile/EditCProfile";
 //Check For token
 if (localStorage.jwtToken) {
   //set auth token header auth
@@ -63,6 +66,7 @@ class App extends Component {
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
 
+
               <Switch>
                 <PrivateRoute
                   exact
@@ -73,8 +77,22 @@ class App extends Component {
               <Switch>
                 <PrivateRoute
                   exact
+                  path="/create-company-profile"
+                  component={CreateCProfile}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
                   path="/edit-profile"
                   component={EditProfile}
+                />
+              </Switch>
+              <Switch>
+                <PrivateRoute
+                  exact
+                  path="/edit-company-profile"
+                  component={EditCProfile}
                 />
               </Switch>
               <Switch>

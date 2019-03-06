@@ -117,10 +117,7 @@ router.post(
     if (req.body.location) profileFields.location = req.body.location;
     if (req.body.bio) profileFields.bio = req.body.bio;
     if (req.body.contact) profileFields.contact = req.body.contact;
-
-    if (req.body.status) profileFields.status = req.body.status;
-    if (req.body.githubusername)
-      profileFields.githubusername = req.body.githubusername;
+    if (req.body.isWorker) profileFields.isWorker = req.body.isWorker;
 
     //Skills -split into array
     if (typeof req.body.skills !== "undefined") {

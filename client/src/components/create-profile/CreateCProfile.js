@@ -7,17 +7,17 @@ import InputGroup from "./../common/InputGroup";
 import { createProfile } from "../../actions/profileActions";
 
 import { withRouter } from "react-router-dom";
-class EditProfile extends Component {
+class CreateCProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
       handle: "",
+      company: "",
+      website: "",
       location: "",
-      skills: "",
-      bio: "",
-      isWorker:true,
       contact: "",
-      twiiter: "",
+      isWorker: false,
+      twitter: "",
       facebook: "",
       linkedin: "",
       youtube: "",
@@ -39,15 +39,13 @@ class EditProfile extends Component {
 
     const profileData = {
       handle: this.state.handle,
-      
+      company: this.state.company,
       location: this.state.location,
-     
-      skills: this.state.skills,
-      isWorker:this.state.isWorker,
       bio: this.state.bio,
       contact: this.state.contact,
-      
       twitter: this.state.twitter,
+      isWorker: this.state.isWorker,
+
       facebook: this.state.facebook,
       linkedin: this.state.linkedin,
       youtube: this.state.youtube,
@@ -115,7 +113,6 @@ class EditProfile extends Component {
       );
     }
 
-   
     return (
       <div className="create-profile">
         <div className="container">
@@ -135,8 +132,22 @@ class EditProfile extends Component {
                   error={errors.handle}
                   info="A unique handle for your profile URL. Your full name, company name, nickname"
                 />
-              
-               
+                <TextFieldGroup
+                  placeholder="Company"
+                  name="company"
+                  value={this.state.company}
+                  onChange={this.onChange}
+                  error={errors.company}
+                  info="Could be your own company or one you work for"
+                />
+                <TextFieldGroup
+                  placeholder="Website"
+                  name="website"
+                  value={this.state.website}
+                  onChange={this.onChange}
+                  error={errors.website}
+                  info="Could be your own website or a company one"
+                />
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
@@ -145,16 +156,7 @@ class EditProfile extends Component {
                   error={errors.location}
                   info="City or city & state suggested (eg. Boston, MA)"
                 />
-                <TextFieldGroup
-                  placeholder="* Skills"
-                  name="skills"
-                  value={this.state.skills}
-                  onChange={this.onChange}
-                  error={errors.skills}
-                  info="Please use comma separated values (eg.
-                    HTML,CSS,JavaScript,PHP)"
-                />
-                
+
                 <TextAreaFieldGroup
                   placeholder="Contact information"
                   name="contact"
@@ -163,6 +165,7 @@ class EditProfile extends Component {
                   error={errors.contact}
                   info="Tell us a little about yourself"
                 />
+
 
                 <div className="mb-3">
                   <button
@@ -192,7 +195,7 @@ class EditProfile extends Component {
     );
   }
 }
-EditProfile.propTypes = {
+CreateCProfile.propTypes = {
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
@@ -204,4 +207,4 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   { createProfile }
-)(withRouter(EditProfile));
+)(withRouter(CreateCProfile));
