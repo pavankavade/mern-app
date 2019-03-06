@@ -24,7 +24,7 @@ class Profiles extends Component {
         ));
       } else {
         profileItems = <h4>No profiles found...</h4>;
-      } <ProfileItem key={profile._id} profile={profile} />
+      }
     }
 
     return (
