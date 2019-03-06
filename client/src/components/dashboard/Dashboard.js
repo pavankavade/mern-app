@@ -32,7 +32,13 @@ class Dashboard extends Component {
         )
       );
     }
-
+    if (profile !== null) {
+      edu = (
+        (!profile.isWorker ? null :
+          <Education education={profile.education} />
+        )
+      );
+    }
 
 
     if (profile !== null) {
