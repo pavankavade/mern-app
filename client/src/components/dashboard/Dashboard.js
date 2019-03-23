@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { getCurrentProfile } from "../../actions/profileActions";
 import Spinner from "./../common/Spinner";
 import { Link } from "react-router-dom";
-//import Books from "./Books";
 import ProfileActions from "./ProfileActions";
 import { deleteAccount } from "../../actions/profileActions";
 import Experience from "./Experience";
@@ -93,9 +92,10 @@ class Dashboard extends Component {
             <p>You have not yet setup a profile, please add some info</p>
             <Link to="/create-profile" className="btn btn-lg btn-info mr-3 mb-3">
               Create Worker Profile
-            </Link><Link to="/create-company-profile" className="btn btn-lg btn-info">
+            </Link><Link to="/create-company-profile" className="btn btn-lg btn-info mb-3">
               Create Company Profile
             </Link>
+
           </div>
         );
       }

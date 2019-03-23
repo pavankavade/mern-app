@@ -5,12 +5,12 @@ import Spinner from '../common/Spinner';
 import ProfileItem from './ProfileItem';
 import { getProfiles } from '../../actions/profileActions';
 
+import SearchBox from "./SearchBox"
 class Profiles extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: " "
-
+      search: ''
     };
   }
   onChange({ target: { search } }) {
@@ -21,27 +21,34 @@ class Profiles extends Component {
   componentDidMount() {
     this.props.getProfiles();
   }
+  handleInput = (e) => {
+    this.setState({ search: e.target.value })
+  }
 
   render() {
-    const { search } = this.state;
+    //const { search } = this.state;
     const { profiles, loading } = this.props.profile;
     let profileItems;
-
-
+    let searchItem = (this.state.search).toLowerCase();
+    //(!profile.isWorker ? null : <ProfileItem key={profile._id} profile={profile} />)
+    //((profile.user.name.localeCompare(this.state.search)) ? null : <ProfileItem key={profile._id} profile={profile} />)
     if (profiles === null || loading) {
       profileItems = <Spinner />;
     } else {
       if (profiles.length > 0) {
-        profileItems = profiles.map(profile => (
-          (!profile.isWorker ? null : <ProfileItem key={profile._id} profile={profile} />)
-        ));
+        profileItems = profiles.map(profile => {
+          if (!(profile.user.name).toLowerCase().indexOf(searchItem)) {
+            return (!profile.isWorker ? null : <ProfileItem key={profile._id} profile={profile} />)
+          }
+        }
+        );
       } else {
         profileItems = <h4>No profiles found...</h4>;
       }
     }
 
     return (
-      <div className="profiles">
+      <div className="profiles" >
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -54,22 +61,7 @@ class Profiles extends Component {
                   Search for a Worker
                     </h2>
 
-                <form >
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control form-control-lg"
-                      placeholder="Search.."
-                      onChange={e => this.onChange(e)}
-                      value={search}
-
-                    />
-                  </div>
-
-                  <button className="btn btn-primary btn-lg btn-block mb-5"
-                    type="submit">Get Worker Profiles</button>
-                </form>
-                {this.state.search}
+                <SearchBox handleInput={this.handleInput} />
               </div>
               {profileItems}
             </div>
