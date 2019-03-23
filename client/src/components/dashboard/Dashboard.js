@@ -91,8 +91,8 @@ class Dashboard extends Component {
               {user.hello}
             </p>
             <p>You have not yet setup a profile, please add some info</p>
-            <Link to="/create-profile" className="btn btn-lg btn-info">
-              Create Profile
+            <Link to="/create-profile" className="btn btn-lg btn-info mr-3 mb-3">
+              Create Worker Profile
             </Link><Link to="/create-company-profile" className="btn btn-lg btn-info">
               Create Company Profile
             </Link>

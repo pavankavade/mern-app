@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import TextFieldGroup from "./../common/TextFieldGroup";
-import TextAreaFieldGroup from "./../common/TextAreaFieldGroup";
 import InputGroup from "./../common/InputGroup";
 import { createProfile } from "../../actions/profileActions";
 
@@ -157,13 +156,13 @@ class CreateCProfile extends Component {
                   info="City or city & state suggested (eg. Boston, MA)"
                 />
 
-                <TextAreaFieldGroup
+                <TextFieldGroup
                   placeholder="Contact information"
                   name="contact"
                   value={this.state.contact}
                   onChange={this.onChange}
                   error={errors.contact}
-                  info="Tell us a little about yourself"
+                  info="Valid phone number for contact"
                 />
 
 
