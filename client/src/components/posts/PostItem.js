@@ -21,6 +21,7 @@ class PostItem extends Component {
 
   findUserLike(likes) {
     const { auth } = this.props;
+
     if (likes.filter(like => like.user === auth.user.id).length > 0) {
       return true;
     } else {
@@ -31,8 +32,7 @@ class PostItem extends Component {
 
   render() {
     const { post, auth, showActions } = this.props;
-
-
+    const { profile } = this.props.profile;
     return (
       <div className="card card-body mb-3">
         <div className="row">
@@ -43,8 +43,8 @@ class PostItem extends Component {
               src={post.avatar}
               alt=""
             />
-            <br />
-            <p className="text-center">{post.name}</p>
+            <br /><Link to={`/profile/${post.handle}`} className="btn btn-info mr-1">
+              <p className="text-center">{post.name}</p></Link>
           </div>
           <div className="col-md-10">
             <ShowMoreText

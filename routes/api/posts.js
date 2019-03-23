@@ -9,11 +9,11 @@ const Post = require('../../Models/Post');
 //Profile Model
 const Profile = require('../../Models/Profile')
 //Validation
-const validatePostInput =require('../../validation/post');
+const validatePostInput = require('../../validation/post');
 // @route   GET api/posts/test
 // @desc    Tests post route
 // @access   Public
-router.get('/test', (req,res) => res.json({"msg":"posts works"}));
+router.get('/test', (req, res) => res.json({ "msg": "posts works" }));
 
 
 // @route   GET api/posts
@@ -22,7 +22,7 @@ router.get('/test', (req,res) => res.json({"msg":"posts works"}));
 router.get('/', (req, res) => {
   Post.find()
     .sort({ date: -1 })
-    .then(post=> res.json(post))
+    .then(post => res.json(post))
     .catch(err => res.status(404).json({ nopostsfound: 'No posts found' }));
 });
 
@@ -42,11 +42,11 @@ router.get('/:id', (req, res) => {
 // @route   GET api/posts
 // @desc    Create Post
 // @access   Private
-router.post('/' , passport.authenticate('jwt', {session:false}), (req,res)=>{
-  const {errors, isValid} = validatePostInput(req.body);
+router.post('/', passport.authenticate('jwt', { session: false }), (req, res) => {
+  const { errors, isValid } = validatePostInput(req.body);
 
   //Check Validation
-  if(!isValid){
+  if (!isValid) {
     //if any errors send 400 with error objects
     return res.status(400).json(errors);
 
@@ -55,30 +55,31 @@ router.post('/' , passport.authenticate('jwt', {session:false}), (req,res)=>{
     text: req.body.text,
     name: req.body.name,
     avatar: req.body.avatar,
-    user: req.user.id
+    user: req.user.id,
+    handle: req.body.handle
   });
 
-  newPost.save().then(post=> res.json(post));
+  newPost.save().then(post => res.json(post));
 });
 
 
 // @route   DE:ETE api/posts/:id
 // @desc    DELETE Post
 // @access   Private
-router.delete('/:id', passport.authenticate('jwt', { session : false}), (req,res)=>{
-  Profile.findOne({user: req.user.id})
-    .then(profile =>{
+router.delete('/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
+  Profile.findOne({ user: req.user.id })
+    .then(profile => {
       Post.findById(req.params.id)
         .then(post => {
           //check for post owner
-          if(post.user.toString() !== req.user.id){
-            return res.status(401).json({notauthorized: 'User not authorized'})
+          if (post.user.toString() !== req.user.id) {
+            return res.status(401).json({ notauthorized: 'User not authorized' })
           }
 
           //Delete
-          post.remove().then(() => res.json({success: true}));
+          post.remove().then(() => res.json({ success: true }));
         })
-        .catch(err => res.status(404).json({postnotfound: 'Post Not Found'}));
+        .catch(err => res.status(404).json({ postnotfound: 'Post Not Found' }));
     })
 });
 
@@ -218,4 +219,4 @@ router.delete(
       .catch(err => res.status(404).json({ postnotfound: 'No post found' }));
   }
 );
-module.exports= router;
+module.exports = router;

@@ -6,11 +6,24 @@ import ProfileItem from './ProfileItem';
 import { getProfiles } from '../../actions/profileActions';
 
 class Profiles extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      search: " "
+
+    };
+  }
+  onChange({ target: { search } }) {
+
+    // Set captured value to input
+    this.setState({ search: search });
+  }
   componentDidMount() {
     this.props.getProfiles();
   }
 
   render() {
+    const { search } = this.state;
     const { profiles, loading } = this.props.profile;
     let profileItems;
 
@@ -47,13 +60,16 @@ class Profiles extends Component {
                       type="text"
                       className="form-control form-control-lg"
                       placeholder="Search.."
-                      name="trackTitle"
+                      onChange={e => this.onChange(e)}
+                      value={search}
 
                     />
                   </div>
+
                   <button className="btn btn-primary btn-lg btn-block mb-5"
                     type="submit">Get Worker Profiles</button>
                 </form>
+                {this.state.search}
               </div>
               {profileItems}
             </div>
