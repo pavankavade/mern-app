@@ -18,7 +18,7 @@ class Navbar extends Component {
 
     const authLinks = (
 
-      <ul className="navbar-nav ml-auto mr-sm-2">
+      <ul className="navbar-nav ml-auto">
         <li className="nav-item">
           <Link className="nav-link" to="/feed">
             Job Postings
@@ -64,7 +64,7 @@ class Navbar extends Component {
     );
 
     return (
-      <nav className="navbar navbar-expand-sm navbar-dark unique-color-dark mb-4">
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-4">
         <div className="container">
           <Link className="navbar-brand" to="/">
             SkyPath
