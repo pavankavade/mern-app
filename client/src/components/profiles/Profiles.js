@@ -53,9 +53,7 @@ class Profiles extends Component {
           <div className="row">
             <div className="col-md-12">
               <h1 className="display-4 text-center">Worker Profiles</h1>
-              <p className="lead text-center">
-                Browse and connect with Workers
-              </p>
+
               <div className="card card-body mb-4 p-4">
                 <h2 className="display-4 text-center">
                   Search for a Worker

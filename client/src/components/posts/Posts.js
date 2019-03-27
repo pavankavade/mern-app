@@ -29,7 +29,6 @@ class Posts extends Component {
     if (profile !== null) {
       postform = (
         (!profile.isWorker ? <PostForm /> : null
-
         )
       );
     }
