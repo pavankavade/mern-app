@@ -15,8 +15,8 @@ class Landing extends Component {
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">SkyPath</h1>
-                <p className="lead">
+                <h1 className="display-3 mb-4 text-info">SkyPath</h1>
+                <p className="lead text-info">
                   {" "}
                   Create a Worker profile/portfolio, share posts and get help
                   from other Workers
