@@ -18,7 +18,6 @@ class Posts extends Component {
     const { posts, loading } = this.props.post;
     let postContent;
     let postform;
-    const { user } = this.props.auth;
     const { profile } = this.props.profile;
     if (posts === null || loading) {
       postContent = <Spinner />;

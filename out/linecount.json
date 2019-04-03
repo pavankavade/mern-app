@@ -558,6 +558,1111 @@
                     "filename": "validation\\register.js"
                 }
             ]
+        },
+        {
+            "version": "0.1.7",
+            "counttime": "2019-03-28 07:44:42",
+            "filesum": 90,
+            "codesum": 26092,
+            "commentsum": 244,
+            "blanksum": 629,
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 5,
+                    "code": 18,
+                    "comment": 1,
+                    "filename": "client\\.gitignore"
+                },
+                {
+                    "blank": 0,
+                    "code": 17709,
+                    "comment": 0,
+                    "filename": "client\\package-lock.json"
+                },
+                {
+                    "blank": 1,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "client\\package.json"
+                },
+                {
+                    "filename": "client\\public\\favicon.ico",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 6,
+                    "code": 31,
+                    "comment": 0,
+                    "filename": "client\\public\\index.html"
+                },
+                {
+                    "blank": 0,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "client\\public\\manifest.json"
+                },
+                {
+                    "blank": 31,
+                    "code": 37,
+                    "comment": 12,
+                    "filename": "client\\README.md"
+                },
+                {
+                    "blank": 9,
+                    "code": 43,
+                    "comment": 12,
+                    "filename": "client\\src\\actions\\authActions.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 142,
+                    "comment": 10,
+                    "filename": "client\\src\\actions\\postActions.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 153,
+                    "comment": 12,
+                    "filename": "client\\src\\actions\\profileActions.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "client\\src\\actions\\types.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "client\\src\\App.css"
+                },
+                {
+                    "blank": 8,
+                    "code": 120,
+                    "comment": 8,
+                    "filename": "client\\src\\App.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "client\\src\\App.test.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 154,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\add-credentials\\AddEducation.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 154,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\add-credentials\\AddExperience.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 90,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\auth\\Login.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 108,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\auth\\Register.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 45,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\common\\InputGroup.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\common\\PrivateRoute.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 44,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\common\\SelectListGroup.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\common\\Spinner.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 36,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\common\\TextAreaFieldGroup.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 46,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\common\\TextFieldGroup.js"
+                },
+                {
+                    "blank": 17,
+                    "code": 192,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\create-profile\\CreateCProfile.js"
+                },
+                {
+                    "blank": 21,
+                    "code": 184,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\create-profile\\CreateProfile.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 118,
+                    "comment": 2,
+                    "filename": "client\\src\\components\\dashboard\\Dashboard.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 56,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\dashboard\\Education.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 56,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\dashboard\\Experience.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\dashboard\\ProfileActions.js"
+                },
+                {
+                    "blank": 17,
+                    "code": 193,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\edit-profile\\EditCProfile.js"
+                },
+                {
+                    "blank": 21,
+                    "code": 185,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\edit-profile\\EditProfile.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\layout\\Footer.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\layout\\Landing.js"
+                },
+                {
+                    "blank": 12,
+                    "code": 100,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\layout\\Navbar.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\not-found\\NotFound.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\post\\CommentFeed.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 75,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\post\\CommentForm.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\post\\CommentItem.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\post\\Post.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\posts\\PostFeed.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 75,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\posts\\PostForm.js"
+                },
+                {
+                    "blank": 17,
+                    "code": 108,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\posts\\PostItem.js"
+                },
+                {
+                    "blank": 12,
+                    "code": 57,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\posts\\Posts.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 68,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\profile\\Profile.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 19,
+                    "comment": 2,
+                    "filename": "client\\src\\components\\profile\\ProfileAbout.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 82,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\profile\\ProfileCreds.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 68,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\profile\\ProfileGithub.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 97,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\profile\\ProfileHeader.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 50,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\profiles\\ProfileItem.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 69,
+                    "comment": 4,
+                    "filename": "client\\src\\components\\profiles\\Profiles.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\profiles\\SearchBox.js"
+                },
+                {
+                    "filename": "client\\src\\img\\200 (1).webp",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client\\src\\img\\200.webp",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client\\src\\img\\showcase.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "client\\src\\img\\spinner.svg"
+                },
+                {
+                    "filename": "client\\src\\img\\tenor.gif",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client\\src\\img\\Thumbs.db",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "client\\src\\index.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 3,
+                    "filename": "client\\src\\index.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "client\\src\\reducers\\authReducers.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "client\\src\\reducers\\errorReducer.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "client\\src\\reducers\\index.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": "client\\src\\reducers\\postReducer.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "client\\src\\reducers\\profileReducer.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 89,
+                    "comment": 31,
+                    "filename": "client\\src\\serviceWorker.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "client\\src\\store.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 2,
+                    "filename": "client\\src\\utils\\setAuthToken.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "client\\src\\validation\\is-empty.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "config\\keys.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "config\\keys_dev.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "config\\keys_prod.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "config\\passport.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 53,
+                    "comment": 1,
+                    "filename": "Models\\Post.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 121,
+                    "comment": 1,
+                    "filename": "Models\\Profile.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 24,
+                    "comment": 1,
+                    "filename": "Models\\User.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3750,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 36,
+                    "code": 141,
+                    "comment": 45,
+                    "filename": "routes\\api\\posts.js"
+                },
+                {
+                    "blank": 39,
+                    "code": 201,
+                    "comment": 57,
+                    "filename": "routes\\api\\profile.js"
+                },
+                {
+                    "blank": 27,
+                    "code": 92,
+                    "comment": 25,
+                    "filename": "routes\\api\\users.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 29,
+                    "comment": 10,
+                    "filename": "server.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "validation\\education.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "validation\\experience.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "validation\\is-empty.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "validation\\login.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "validation\\post.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 41,
+                    "comment": 0,
+                    "filename": "validation\\profile.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 37,
+                    "comment": 0,
+                    "filename": "validation\\register.js"
+                }
+            ]
+        },
+        {
+            "version": "0.1.7",
+            "counttime": "2019-04-03 09:45:46",
+            "filesum": 89,
+            "codesum": 26098,
+            "commentsum": 244,
+            "blanksum": 626,
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 3,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 5,
+                    "code": 18,
+                    "comment": 1,
+                    "filename": "client\\.gitignore"
+                },
+                {
+                    "blank": 0,
+                    "code": 17709,
+                    "comment": 0,
+                    "filename": "client\\package-lock.json"
+                },
+                {
+                    "blank": 1,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "client\\package.json"
+                },
+                {
+                    "blank": 5,
+                    "code": 31,
+                    "comment": 0,
+                    "filename": "client\\public\\index.html"
+                },
+                {
+                    "filename": "client\\public\\logo1.ico",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 15,
+                    "comment": 0,
+                    "filename": "client\\public\\manifest.json"
+                },
+                {
+                    "blank": 31,
+                    "code": 37,
+                    "comment": 12,
+                    "filename": "client\\README.md"
+                },
+                {
+                    "blank": 9,
+                    "code": 43,
+                    "comment": 12,
+                    "filename": "client\\src\\actions\\authActions.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 142,
+                    "comment": 10,
+                    "filename": "client\\src\\actions\\postActions.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 153,
+                    "comment": 12,
+                    "filename": "client\\src\\actions\\profileActions.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "client\\src\\actions\\types.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "client\\src\\App.css"
+                },
+                {
+                    "blank": 8,
+                    "code": 120,
+                    "comment": 8,
+                    "filename": "client\\src\\App.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "client\\src\\App.test.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 154,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\add-credentials\\AddEducation.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 154,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\add-credentials\\AddExperience.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 90,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\auth\\Login.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 108,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\auth\\Register.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 45,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\common\\InputGroup.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\common\\PrivateRoute.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 44,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\common\\SelectListGroup.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\common\\Spinner.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 36,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\common\\TextAreaFieldGroup.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 46,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\common\\TextFieldGroup.js"
+                },
+                {
+                    "blank": 17,
+                    "code": 192,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\create-profile\\CreateCProfile.js"
+                },
+                {
+                    "blank": 21,
+                    "code": 184,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\create-profile\\CreateProfile.js"
+                },
+                {
+                    "blank": 19,
+                    "code": 118,
+                    "comment": 2,
+                    "filename": "client\\src\\components\\dashboard\\Dashboard.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 56,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\dashboard\\Education.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 56,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\dashboard\\Experience.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\dashboard\\ProfileActions.js"
+                },
+                {
+                    "blank": 17,
+                    "code": 193,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\edit-profile\\EditCProfile.js"
+                },
+                {
+                    "blank": 21,
+                    "code": 185,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\edit-profile\\EditProfile.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 8,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\layout\\Footer.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\layout\\Landing.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 105,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\layout\\Navbar.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\not-found\\NotFound.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\post\\CommentFeed.js"
+                },
+                {
+                    "blank": 13,
+                    "code": 75,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\post\\CommentForm.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\post\\CommentItem.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 51,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\post\\Post.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\posts\\PostFeed.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 75,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\posts\\PostForm.js"
+                },
+                {
+                    "blank": 17,
+                    "code": 107,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\posts\\PostItem.js"
+                },
+                {
+                    "blank": 12,
+                    "code": 56,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\posts\\Posts.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 68,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\profile\\Profile.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 19,
+                    "comment": 2,
+                    "filename": "client\\src\\components\\profile\\ProfileAbout.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 82,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\profile\\ProfileCreds.js"
+                },
+                {
+                    "blank": 7,
+                    "code": 68,
+                    "comment": 1,
+                    "filename": "client\\src\\components\\profile\\ProfileGithub.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 97,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\profile\\ProfileHeader.js"
+                },
+                {
+                    "blank": 6,
+                    "code": 50,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\profiles\\ProfileItem.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 69,
+                    "comment": 4,
+                    "filename": "client\\src\\components\\profiles\\Profiles.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": "client\\src\\components\\profiles\\SearchBox.js"
+                },
+                {
+                    "filename": "client\\src\\img\\logo.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client\\src\\img\\logo1.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "client\\src\\img\\showcase.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 0,
+                    "code": 22,
+                    "comment": 0,
+                    "filename": "client\\src\\img\\spinner.svg"
+                },
+                {
+                    "filename": "client\\src\\img\\Thumbs.db",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 1,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "client\\src\\index.css"
+                },
+                {
+                    "blank": 2,
+                    "code": 7,
+                    "comment": 3,
+                    "filename": "client\\src\\index.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 19,
+                    "comment": 0,
+                    "filename": "client\\src\\reducers\\authReducers.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "client\\src\\reducers\\errorReducer.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 11,
+                    "comment": 0,
+                    "filename": "client\\src\\reducers\\index.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": "client\\src\\reducers\\postReducer.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "client\\src\\reducers\\profileReducer.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 89,
+                    "comment": 31,
+                    "filename": "client\\src\\serviceWorker.js"
+                },
+                {
+                    "blank": 4,
+                    "code": 12,
+                    "comment": 0,
+                    "filename": "client\\src\\store.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 9,
+                    "comment": 2,
+                    "filename": "client\\src\\utils\\setAuthToken.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "client\\src\\validation\\is-empty.js"
+                },
+                {
+                    "blank": 1,
+                    "code": 5,
+                    "comment": 0,
+                    "filename": "config\\keys.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "config\\keys_dev.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 4,
+                    "comment": 0,
+                    "filename": "config\\keys_prod.js"
+                },
+                {
+                    "blank": 2,
+                    "code": 23,
+                    "comment": 0,
+                    "filename": "config\\passport.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 53,
+                    "comment": 1,
+                    "filename": "Models\\Post.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 121,
+                    "comment": 1,
+                    "filename": "Models\\Profile.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 24,
+                    "comment": 1,
+                    "filename": "Models\\User.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 3750,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 39,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 36,
+                    "code": 141,
+                    "comment": 45,
+                    "filename": "routes\\api\\posts.js"
+                },
+                {
+                    "blank": 39,
+                    "code": 201,
+                    "comment": 57,
+                    "filename": "routes\\api\\profile.js"
+                },
+                {
+                    "blank": 27,
+                    "code": 92,
+                    "comment": 25,
+                    "filename": "routes\\api\\users.js"
+                },
+                {
+                    "blank": 15,
+                    "code": 29,
+                    "comment": 10,
+                    "filename": "server.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "validation\\education.js"
+                },
+                {
+                    "blank": 9,
+                    "code": 21,
+                    "comment": 0,
+                    "filename": "validation\\experience.js"
+                },
+                {
+                    "blank": 3,
+                    "code": 6,
+                    "comment": 0,
+                    "filename": "validation\\is-empty.js"
+                },
+                {
+                    "blank": 8,
+                    "code": 20,
+                    "comment": 0,
+                    "filename": "validation\\login.js"
+                },
+                {
+                    "blank": 5,
+                    "code": 16,
+                    "comment": 0,
+                    "filename": "validation\\post.js"
+                },
+                {
+                    "blank": 10,
+                    "code": 41,
+                    "comment": 0,
+                    "filename": "validation\\profile.js"
+                },
+                {
+                    "blank": 11,
+                    "code": 37,
+                    "comment": 0,
+                    "filename": "validation\\register.js"
+                }
+            ]
         }
     ]
 }
