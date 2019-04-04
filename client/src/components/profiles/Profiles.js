@@ -4,40 +4,42 @@ import PropTypes from 'prop-types';
 import Spinner from '../common/Spinner';
 import ProfileItem from './ProfileItem';
 import { getProfiles } from '../../actions/profileActions';
+import TextAreaFieldGroup from '../common/TextAreaFieldGroup';
+import SelectListGroup from '../common/SelectListGroup';
 
-import SearchBox from "./SearchBox"
 class Profiles extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      search: ''
+      search: '',
+      check: ''
     };
-  }
-  onChange({ target: { search } }) {
+    this.onChange = this.onChange.bind(this);
 
-    // Set captured value to input
-    this.setState({ search: search });
+  }
+
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+
   }
   componentDidMount() {
     this.props.getProfiles();
   }
-  handleInput = (e) => {
-    this.setState({ search: e.target.value })
-  }
-
   render() {
     //const { search } = this.state;
     const { profiles, loading } = this.props.profile;
     let profileItems;
     let searchItem = (this.state.search).toLowerCase();
-    //(!profile.isWorker ? null : <ProfileItem key={profile._id} profile={profile} />)
-    //((profile.user.name.localeCompare(this.state.search)) ? null : <ProfileItem key={profile._id} profile={profile} />)
+    const { check } = this.state.check;
+    console.log(this.state.check);
+
     if (profiles === null || loading) {
       profileItems = <Spinner />;
     } else {
       if (profiles.length > 0) {
         profileItems = profiles.map(profile => {
-          if (!(profile.user.name).toLowerCase().indexOf(searchItem)) {
+
+          if (!(profile.skills).toLowerCase().indexOf(searchItem)) {
             return (!profile.isWorker ? null : <ProfileItem key={profile._id} profile={profile} />)
           }
         }
@@ -46,6 +48,22 @@ class Profiles extends Component {
         profileItems = <h4>No profiles found...</h4>;
       }
     }
+
+    const options = [
+      { label: 'Name', value: 'name' },
+      { label: 'Location', value: 'location' },
+      { label: 'skills', value: 'skills' },
+    ];
+
+    /*<SelectListGroup
+                 placeholder="search by"
+                 name="check"
+                 value={this.state.check}
+                 onChange={this.onChange}
+                 options={options}
+                 info="Search by"
+               />
+               {this.state.check} */
 
     return (
       <div className="profiles" >
@@ -59,7 +77,14 @@ class Profiles extends Component {
                   Search for a Worker
                     </h2>
 
-                <SearchBox handleInput={this.handleInput} />
+                <TextAreaFieldGroup
+                  placeholder="Search for profiles"
+                  name="search"
+                  value={this.state.search}
+                  onChange={this.onChange}
+                />
+
+
               </div>
               {profileItems}
             </div>

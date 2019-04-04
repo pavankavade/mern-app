@@ -55,6 +55,7 @@ class PostItem extends Component {
             >
               <p className="lead">{post.text}</p>
             </ShowMoreText>
+            <p><b>Skills Required:</b></p><p>{post.skillsr}</p>
 
 
             {showActions ? (

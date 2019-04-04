@@ -118,11 +118,7 @@ router.post(
     if (req.body.bio) profileFields.bio = req.body.bio;
     if (req.body.contact) profileFields.contact = req.body.contact;
     if (req.body.isWorker) profileFields.isWorker = req.body.isWorker;
-
-    //Skills -split into array
-    if (typeof req.body.skills !== "undefined") {
-      profileFields.skills = req.body.skills.split(",");
-    }
+    if (req.body.skills) profileFields.skills = req.body.skills;
 
     //Social
     profileFields.social = {};

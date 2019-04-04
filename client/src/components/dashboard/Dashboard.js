@@ -8,9 +8,15 @@ import ProfileActions from "./ProfileActions";
 import { deleteAccount } from "../../actions/profileActions";
 import Experience from "./Experience";
 import Education from "./Education";
+import { getPosts } from '../../actions/postActions';
+import PostItem from '../posts/PostItem';
+import ShowMoreText from 'react-show-more-text';
+
 class Dashboard extends Component {
 
   componentDidMount() {
+    this.props.getPosts();
+
     this.props.getCurrentProfile();
   }
   onDeleteClick(e) {
@@ -20,10 +26,30 @@ class Dashboard extends Component {
   render() {
     const { user } = this.props.auth;
     const { profile, loading } = this.props.profile;
-
+    const { posts } = this.props.post;
+    let matchedJobs;
     let dashboardContent;
     let edit;
     let exp, edu;
+    let sk;
+    if (profile !== null) {
+      sk = (profile.skills).toLowerCase();
+    }
+    //let sk = (profile.skills).toLowerCase();
+    if (posts !== null) {
+      matchedJobs = (
+        posts.map(post => {
+          if (!(post.skillsr).toLowerCase().indexOf(sk)) {
+            return <PostItem key={post._id} post={post} />
+
+          }
+
+        }
+        )
+      );
+    }
+
+
     if (profile !== null) {
       exp = (
         (!profile.isWorker ? null :
@@ -38,8 +64,6 @@ class Dashboard extends Component {
         )
       );
     }
-
-
     if (profile !== null) {
       edit = (
         (!profile.isWorker ? <Link to="/edit-company-profile" className="btn btn-light">
@@ -66,6 +90,7 @@ class Dashboard extends Component {
               Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
               {user.hello}
             </p>
+
             <div className="btn-group mb-4" role="group">
 
               {edit}
@@ -100,10 +125,6 @@ class Dashboard extends Component {
         );
       }
     }
-
-
-
-
     return (
       <div className="dashboard" >
         <div className="container">
@@ -112,6 +133,11 @@ class Dashboard extends Component {
               <h1 className="display-4">Dashboard</h1>
 
               {dashboardContent}
+              <br></br>
+              <h2>Matched Job Postings As Per Your Skills</h2>
+              <div className="col-md-10">
+                {matchedJobs}
+              </div>
             </div>
           </div>
         </div>
@@ -123,17 +149,19 @@ class Dashboard extends Component {
 Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
   deleteAccount: PropTypes.func.isRequired,
+  post: PropTypes.object.isRequired,
 
   auth: PropTypes.object.isRequired,
   profile: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
+  post: state.post,
   profile: state.profile,
   auth: state.auth
 });
 
 export default connect(
   mapStateToProps,
-  { getCurrentProfile, deleteAccount }
+  { getPosts, getCurrentProfile, deleteAccount }
 )(Dashboard);

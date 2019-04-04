@@ -25,7 +25,7 @@ const ProfileSchema = new Schema({
     type: String,
   },
   skills: {
-    type: [String],
+    type: String,
     required: true
   },
   bio: {

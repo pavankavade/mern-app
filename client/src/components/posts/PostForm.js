@@ -9,6 +9,7 @@ class PostForm extends Component {
     super(props);
     this.state = {
       text: '',
+      skillsr: '',
       errors: {}
     };
 
@@ -29,19 +30,18 @@ class PostForm extends Component {
 
     const newPost = {
       text: this.state.text,
+      skillsr: this.state.skillsr,
       name: user.name,
       avatar: user.avatar,
       handle: profile.handle
     };
 
-    this.props.addPost(newPost);
-    this.setState({ text: '' });
+    this.props.addPost(newPost, this.props.history);
   }
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
+    console.log(this.state.skillsr)
   }
-
-
   render() {
     const { errors } = this.state;
     return (
@@ -57,6 +57,13 @@ class PostForm extends Component {
                   value={this.state.text}
                   onChange={this.onChange}
                   error={errors.text}
+                />
+                <TextAreaFieldGroup
+                  placeholder="skills required "
+                  name="skillsr"
+                  value={this.state.skillsr}
+                  onChange={this.onChange}
+                  error={errors.skillsr}
                 />
               </div>
               <button type="submit" className="btn btn-dark">
