@@ -51,7 +51,7 @@ class Posts extends Component {
     if (posts !== null) {
       postContent = (
         posts.map(post => {
-          if (!(post.skillsr).toLowerCase().indexOf(searchItem)) {
+          if ((post.text).toLowerCase().includes(searchItem)) {
             return <PostItem key={post._id} post={post} />
           }
         }

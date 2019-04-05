@@ -39,7 +39,7 @@ class Profiles extends Component {
       if (profiles.length > 0) {
         profileItems = profiles.map(profile => {
 
-          if (!(profile.skills).toLowerCase().indexOf(searchItem)) {
+          if ((profile.skills).toLowerCase().includes(searchItem)) {
             return (!profile.isWorker ? null : <ProfileItem key={profile._id} profile={profile} />)
           }
         }

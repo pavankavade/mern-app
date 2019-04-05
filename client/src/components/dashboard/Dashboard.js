@@ -10,7 +10,7 @@ import Experience from "./Experience";
 import Education from "./Education";
 import { getPosts } from '../../actions/postActions';
 import PostItem from '../posts/PostItem';
-import ShowMoreText from 'react-show-more-text';
+//import ShowMoreText from 'react-show-more-text';
 
 class Dashboard extends Component {
 
@@ -32,18 +32,36 @@ class Dashboard extends Component {
     let edit;
     let exp, edu;
     let sk;
+    let firstskill;
+    let secondskill, thirdskill, fourthskill;
+    // S
     if (profile !== null) {
-      sk = (profile.skills).toLowerCase();
+      firstskill = profile.skills.toLowerCase().trim().split(',')[0];
+      secondskill = profile.skills.toLowerCase().trim().split(',')[1];
+      thirdskill = profile.skills.toLowerCase().trim().split(',')[2];
+      fourthskill = profile.skills.toLowerCase().trim().split(',')[3];
+
     }
     //let sk = (profile.skills).toLowerCase();
     if (posts !== null) {
       matchedJobs = (
         posts.map(post => {
-          if (!(post.skillsr).toLowerCase().indexOf(sk)) {
+          if ((post.skillsr).toLowerCase().includes(firstskill)) {
             return <PostItem key={post._id} post={post} />
 
           }
+          if ((post.skillsr).toLowerCase().includes(secondskill)) {
+            return <PostItem key={post._id} post={post} />
 
+          }
+          if ((post.skillsr).toLowerCase().includes(thirdskill)) {
+            return <PostItem key={post._id} post={post} />
+
+          }
+          if ((post.skillsr).toLowerCase().includes(fourthskill)) {
+            return <PostItem key={post._id} post={post} />
+
+          }
         }
         )
       );

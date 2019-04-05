@@ -9,13 +9,22 @@ class ProfileAbout extends Component {
 
     // Get first name
     const firstName = profile.user.name.trim().split(' ')[0];
+    const firstskill = profile.skills.trim().split(',')[0];
+    const secondskill = profile.skills.trim().split(',')[1];
+    const thirdskill = profile.skills.trim().split(',')[2];
+    const fourthskill = profile.skills.trim().split(',')[3];
 
     // Skill List
-    const skills = profile.skills.map((skill, index) => (
-      <div key={index} className="p-3">
-        <i className="fa fa-check" /> {skill}
+    const skills = (
+
+      <div className="p-3">
+        <i className="fa fa-check" /> {firstskill}<br></br>
+        <i className="fa fa-check" /> {secondskill}<br></br>
+        <i className="fa fa-check" /> {thirdskill}<br></br>
+        <i className="fa fa-check" /> {fourthskill}<br></br>
+
       </div>
-    ));
+    )
     const { isAuthenticated } = this.props.auth;
     return (
 
